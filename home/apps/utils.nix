@@ -14,8 +14,11 @@
     feh
     eog
     gthumb
-ghostty
+    ghostty
+    duf
     vlc
+    eza
+    tree
     nemo
     kitty
     rofi
@@ -24,12 +27,6 @@ ghostty
     obsidian
     fastfetch
     vesktop
-    stremio
     libreoffice-fresh
-
-    # Gaming
-    steam
-    lutris
-    mangohud
     ];
 }

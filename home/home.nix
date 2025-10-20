@@ -6,6 +6,7 @@
       ./apps/utils.nix
       ./apps/brave.nix
       ./apps/theming.nix
+      ./apps/nh.nix
       ./config/git.nix
       ./config/shell.nix
       ./config/hyprland/hyprland.nix

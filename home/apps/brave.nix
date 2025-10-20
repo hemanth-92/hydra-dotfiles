@@ -15,18 +15,8 @@
       { id = "nngceckbapebfimnlniiiahkandclblb"; }
       # Dark Reader
       { id = "eimadpbcbfnmbkopoojfekhnkhdbieeh"; }
-      # Honey
-      { id = "bmnlcjabgnpnenekpadlanbbkooimhnj"; }
       # JSON Viewer
       { id = "gbmdgpbipfallnflgajpaliibnhdgobh"; }
-      # Looty
-      # {id = "ajfbflclpnpbjkfibijekgcombcgehbi";}
-      # PoE Wiki Search
-      { id = "nalpbalegehinpooppmmgjidgiebblad"; }
-      # React Dev Tools
-      { id = "fmkadmapgofadopljbjfkapdkoienihi"; }
-      # Reddit Enhancement Suite
-      { id = "kbmfpngjjgdllneeigpgjifpgocmfgmb"; }
       # Return YouTube Dislike
       { id = "gebbhagfogifgggkldgodflihgfeippi"; }
       # Session Manager
