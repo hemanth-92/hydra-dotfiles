@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  mangoconfDir = "${config.home.homeDirectory}/confix/home/config/mango/config";
+  mangoconfDir = "${config.home.homeDirectory}/hydra-dotfiles/home/config/mango/config";
 in
 
 {

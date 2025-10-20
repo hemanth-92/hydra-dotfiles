@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  waybarconfDir = "${config.home.homeDirectory}/confix/home/config/waybar/config";
+  waybarconfDir = "${config.home.homeDirectory}hydra-dotfiles/home/config/waybar/config";
 in
 
 {

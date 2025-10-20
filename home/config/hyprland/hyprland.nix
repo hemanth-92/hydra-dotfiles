@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  hyprconfDir = "${config.home.homeDirectory}/confix/home/config/hyprland/config";
+  hyprconfDir = "${config.home.homeDirectory}/hydra-dotfiles/home/config/hyprland/config";
 in
 
 {
@@ -14,3 +14,4 @@ in
     ln -sfn ${hyprconfDir} ${config.home.homeDirectory}/.config/hypr
   '';
 }
+
