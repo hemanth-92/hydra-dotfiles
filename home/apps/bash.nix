@@ -12,8 +12,8 @@
     #'';
     shellAliases = {
       sv = "sudo nvim";
-      rebuild = "nh os switch";
-      update = "nh os switch --update";
+      switch = "nh os switch -H lapix";
+      update = "nh os switch -u -H lapix";
       gcclean = "nh clean all --keep 5";
       nix-search = "nh search";
       nix-test = "nh os test";
@@ -26,6 +26,7 @@
       "...." = "cd ../../..";
       config = "cd ~/.config";
       btw = "echo I use nixos, btw";
+        cat = "bat";
   };
   };
 }

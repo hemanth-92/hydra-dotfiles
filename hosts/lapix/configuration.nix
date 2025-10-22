@@ -19,7 +19,7 @@
     };
 
     # Define your hostname. 
-    networking.hostName = "nixos";
+    networking.hostName = "lapix";
 
     # Allow unfree packages
     nixpkgs.config.allowUnfree = true;
@@ -31,7 +31,26 @@
     ];
 
     # Enable flakes
-    nix.settings.experimental-features = [ "nix-command" "flakes" ];
+      nix = {
+      settings = {
+      warn-dirty = false;
+      auto-optimise-store = true;
+      use-xdg-base-directories = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+        "pipe-operators"
+      ];
+      substituters = [
+        "https://hyprland.cachix.org"
+        "https://nix-community.cachix.org"
+      ];
+      trusted-public-keys = [
+        "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+    };
+    };
 
     system.stateVersion = "25.05";
 

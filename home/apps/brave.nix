@@ -9,8 +9,6 @@
       { id = "igiofjhpmpihnifddepnpngfjhkfenbp"; }
       # Awesome Screen Recorder & Screenshot
       { id = "nlipoenfbbikpbjkfpfillcgkoblgpmj"; }
-      # Better PathOfExile Trading
-      { id = "fhlinfpmdlijegjlpgedcmglkakaghnk"; }
       # Bitwarden
       { id = "nngceckbapebfimnlniiiahkandclblb"; }
       # Dark Reader
@@ -37,8 +35,6 @@
       { id = "ohahllgiabjaoigichmmfljhkcfikeof"; }
       # Allow CORS
       { id = "lhobafahddgcelffkeicbaginigeejlf"; }
-      # PixelParallel by htmlBurger
-      { id = "iffnoibnepbcloaaagchjonfplimpkob"; }
     ];
   };
 

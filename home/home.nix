@@ -7,8 +7,10 @@
       ./apps/brave.nix
       ./apps/theming.nix
       ./apps/nh.nix
-      ./config/git.nix
-      ./config/shell.nix
+      ./apps/git.nix
+      ./apps/bash.nix
+      ./apps/ghostty.nix
+      ./apps/rofi.nix
       ./config/hyprland/hyprland.nix
       ./config/niri/niri.nix
       ./config/waybar/waybar.nix
