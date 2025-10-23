@@ -98,9 +98,9 @@
     xdg-desktop-portal-gtk
     xdg-desktop-portal-hyprland
     ffmpegthumbnailer
+    watchdog
 
     # System utils
-    btop
     nvtopPackages.full
   ];
 }

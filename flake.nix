@@ -24,13 +24,13 @@
 
   outputs = { self, nixpkgs, stylix, home-manager, mango, ... }@inputs: {
     nixosConfigurations = {
-      lapix = nixpkgs.lib.nixosSystem {
+      ideapad = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           mango.nixosModules.mango
           stylix.nixosModules.stylix
-          ./hosts/lapix/configuration.nix
+          ./hosts/ideapad/configuration.nix
           home-manager.nixosModules.default
           {
             home-manager = {

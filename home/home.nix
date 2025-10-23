@@ -11,10 +11,10 @@
       ./apps/bash.nix
       ./apps/ghostty.nix
       ./apps/rofi.nix
-      ./config/hyprland/hyprland.nix
-      ./config/niri/niri.nix
-      ./config/waybar/waybar.nix
-      ./config/mango/mango.nix
+      ./apps/waypaper.nix
+      ./configs/hyprland/hyprland.nix
+      ./configs/waybar/waybar.nix
+      ./configs/mango/mango.nix
     ];
 
   home = {
