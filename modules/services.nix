@@ -34,18 +34,18 @@
   # Fonts
   fonts = {
     packages = with pkgs; [
-    maple-mono.NF-CN
-    noto-fonts
-    noto-fonts-emoji
-    noto-fonts-cjk-sans
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-    nerd-fonts.droid-sans-mono
-    font-awesome
-  ];
-  fontconfig = {
-    defaultFonts = {
-      emoji = [ "Noto Color Emoji" ]; # or use "OpenMoji Color"
+      maple-mono.NF-CN
+      noto-fonts
+      noto-fonts-emoji
+      noto-fonts-cjk-sans
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.fira-code
+      nerd-fonts.droid-sans-mono
+      font-awesome
+    ];
+    fontconfig = {
+      defaultFonts = {
+        emoji = [ "Noto Color Emoji" ]; # or use "OpenMoji Color"
       };
     };
   };
@@ -102,5 +102,6 @@
 
     # System utils
     nvtopPackages.full
+    waybar
   ];
 }

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,inputs, ... }:
 
 {
   imports =
@@ -12,6 +12,9 @@
       ./apps/ghostty.nix
       ./apps/rofi.nix
       ./apps/waypaper.nix
+      ./apps/swaync.nix
+      ./apps/swayosd.nix
+      ./apps/nemo.nix
       ./configs/hyprland/hyprland.nix
       ./configs/waybar/waybar.nix
       ./configs/mango/mango.nix

@@ -10,3 +10,8 @@ swww-daemon &
 
 # Screen share
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+
+# notify
+swaync &
+
+swayosd-server &

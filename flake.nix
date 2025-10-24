@@ -16,6 +16,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim.url = "github:hemanth-92/nixvim";
+
     # MangoWC
     mango = {
       url = "github:DreamMaoMao/mango";
@@ -40,6 +42,7 @@
                 zenith = import ./home/home.nix;
               };
               backupFileExtension = "backup";
+	     extraSpecialArgs = { inherit inputs; };
             };
           }
         ];
