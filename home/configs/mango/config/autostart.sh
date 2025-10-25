@@ -15,3 +15,6 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 swaync &
 
 swayosd-server &
+
+wl-clip-persist --clipboard both &
+wl-paste --watch cliphist store &
