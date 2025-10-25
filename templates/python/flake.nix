@@ -29,10 +29,9 @@
                 python3Packages.flake8
                 python3Packages.black
               ];
-
-              languages.python = {
+              languages.python.uv = {
                 enable = true;
-                venv.enable = true;
+                packages = pkgs.uv;
               };
             }
           ];
