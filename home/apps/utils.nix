@@ -70,7 +70,6 @@
     inxi # show system information
     powertop
     bat
-    nitch
 
     # Show Disk Usage
     dua
@@ -88,6 +87,7 @@
     evince # pdf
     audacious
     zenity
+    firefox
 
     tree
     swayidle
@@ -141,5 +141,6 @@
     # formatter
     nixfmt-rfc-style
     shfmt
+
   ];
 }

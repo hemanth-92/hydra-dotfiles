@@ -23,6 +23,8 @@
 
     nixvim.url = "github:hemanth-92/nixvim";
 
+    devenv.url = "github:cachix/devenv";
+
     # MangoWC
     mango = {
       url = "github:DreamMaoMao/mango";
@@ -31,7 +33,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       stylix,
       home-manager,
@@ -63,5 +64,6 @@
           ];
         };
       };
+      templates = import ./templates/default.nix;
     };
 }
