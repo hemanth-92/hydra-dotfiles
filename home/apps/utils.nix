@@ -69,6 +69,8 @@
     xdg-utils
     inxi # show system information
     powertop
+    bat
+    nitch
 
     # Show Disk Usage
     dua
@@ -134,6 +136,10 @@
     #google-chrome
 
     #minecraft
-    #prismlauncher
+    prismlauncher
+
+    # formatter
+    nixfmt-rfc-style
+    shfmt
   ];
 }

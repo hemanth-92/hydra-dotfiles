@@ -4,12 +4,17 @@
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-25.05";
 
-    # Home manager input
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
+    home-manager-stable = {
+      url = "github:nix-community/home-manager/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
+
     # Stylix theme input
     stylix = {
       url = "github:nix-community/stylix/release-25.05";
@@ -24,29 +29,39 @@
     };
   };
 
-  outputs = { self, nixpkgs, stylix, home-manager, mango, ... }@inputs: {
-    nixosConfigurations = {
-      ideapad = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          mango.nixosModules.mango
-          stylix.nixosModules.stylix
-          ./hosts/ideapad/configuration.nix
-          home-manager.nixosModules.default
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users = {
-                zenith = import ./home/home.nix;
+  outputs =
+    {
+      self,
+      nixpkgs,
+      stylix,
+      home-manager,
+      mango,
+      ...
+    }@inputs:
+    {
+      nixosConfigurations = {
+        ideapad = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            mango.nixosModules.mango
+            stylix.nixosModules.stylix
+            ./hosts/ideapad/configuration.nix
+            home-manager.nixosModules.default
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users = {
+                  zenith = import ./home/home.nix;
+                };
+                backupFileExtension = "backup";
+                overwriteBackup = true;
+                extraSpecialArgs = { inherit inputs; };
               };
-              backupFileExtension = "backup";
-	     extraSpecialArgs = { inherit inputs; };
-            };
-          }
-        ];
+            }
+          ];
+        };
       };
     };
-  };
 }

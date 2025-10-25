@@ -1,38 +1,36 @@
 { config, pkgs, ... }:
 
 {
-    imports =
-    [   # Include the results of the hardware scan.
-        ./hardware-configuration.nix
-        ./driver.nix
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./driver.nix
+    ../modules.nix
+  ];
 
-        ../modules.nix
-    ];
-
-    # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.zenith = {
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.zenith = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    kitty
+    extraGroups = [
+      "networkmanager"
+      "wheel"
     ];
-    };
+    packages = with pkgs; [ kitty ];
+  };
 
-    # Define your hostname. 
-    networking.hostName = "nixos";
+  # Define your hostname.
+  networking.hostName = "nixos";
 
-    # Allow unfree packages
-    nixpkgs.config.allowUnfree = true;
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
-    # List packages installed in system profile. To search, run:
-    # $ nix search wget
-    environment.systemPackages = with pkgs; [
-    neovim
-    ];
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [ neovim ];
 
-    # Enable flakes
-      nix = {
-      settings = {
+  # Enable flakes
+  nix = {
+    settings = {
       warn-dirty = false;
       auto-optimise-store = true;
       use-xdg-base-directories = true;
@@ -50,8 +48,8 @@
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       ];
     };
-    };
+  };
 
-    system.stateVersion = "25.05";
+  system.stateVersion = "25.05";
 
 }

@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   hyprconfDir = "${config.home.homeDirectory}/hydra-dotfiles/home/configs/hyprland/config";
@@ -9,9 +14,8 @@ in
     text = "";
   };
 
-  home.activation.symlink-hypr = lib.hm.dag.entryAfter ["writeBoundary"] ''
+  home.activation.symlink-hypr = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     mkdir -p ${config.home.homeDirectory}/.config
     ln -sfn ${hyprconfDir} ${config.home.homeDirectory}/.config/hypr
   '';
 }
-

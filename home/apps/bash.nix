@@ -1,14 +1,13 @@
 { config, pkgs, ... }:
 
-
 {
   programs.bash = {
     enable = true;
     enableCompletion = true;
-      #profileExtra = ''
-      #if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-       # exec Hyprland
-      #fi
+    #profileExtra = ''
+    #if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+    # exec Hyprland
+    #fi
     #'';
     shellAliases = {
       sv = "sudo nvim";
@@ -26,7 +25,7 @@
       "...." = "cd ../../..";
       config = "cd ~/.config";
       btw = "echo I use nixos, btw";
-        cat = "bat";
-  };
+      cat = "bat";
+    };
   };
 }

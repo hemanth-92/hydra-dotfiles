@@ -1,62 +1,36 @@
-_: {
-  programs = {
-    git = {
-      enable = true;
-      userName = "hemanth-92";
-      userEmail = "131354764+hemanth-92@users.noreply.github.com";
-      difftastic = {
-        enable = true;
-        background = "dark";
-      };
-      extraConfig = {
-        init = {
-          defaultBranch = "main";
-        };
-        alias = {
-          # blame with ignore whitespace and track movement across all commits
-          blame = "blame -w -C -C -C";
-          diff = "diff --word-diff";
-        };
-        branch = {
-          master = {
-            merge = "refs/heads/master";
-          };
-          main = {
-            merge = "refs/heads/main";
-          };
-          sort = "-committerdate";
-        };
-        core = {
-          # use fileystem monitor daemon to speed up git status for large repos like nixpkgs
-          fsmonitor = true;
-        };
-        diff = {
-          tool = "nvim -d";
-          guitool = "code";
-          colorMoved = "default";
-        };
-        format = {
-          pretty = "format:%C(yellow)%h%Creset -%C(red)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset";
-        };
-        merge = {
-          conflictstyle = "diff3";
-        };
-        pull = {
-          rebase = true;
-        };
-        push = {
-          default = "simple";
-        };
-        # reuse record resolution: git automatically resolves conflicts using the recorded resolution
-        rerere = {
-          enabled = true;
-          autoUpdate = true;
-        };
-      };
-    };
+{ pkgs, ... }:
+{
+  programs.git = {
+    enable = true;
 
-    lazygit.enable = true;
+    settings = {
+      user = {
+        name = "hemanth-92";
+        email = "131354764+hemanth-92@users.noreply.github.com";
+      };
+
+      init.defaultBranch = "main";
+      merge.conflictstyle = "diff3";
+      diff.colorMoved = "default";
+      pull.ff = "only";
+      color.ui = true;
+    };
   };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = true;
+
+    options = {
+      line-numbers = true;
+      side-by-side = false;
+      diff-so-fancy = true;
+      navigate = true;
+    };
+  };
+
+  home.packages = [ pkgs.gh ]; # pkgs.git-lfs
+
   home.shellAliases = {
     gs = "git status";
     lg = "lazygit";

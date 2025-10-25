@@ -23,9 +23,11 @@
     "tray"
   ],
 
-  "clock": {
-    "format-alt": "{:%Y-%m-%d}"
-  },
+ "clock": {
+  "format": "{:%I:%M %p}",      
+  "format-alt": "{:%d-%m-%Y}",      
+  "tooltip": false                  
+},
   "cpu": {
     "format": "CPU: {usage}%",
     "tooltip": false
