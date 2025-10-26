@@ -22,7 +22,6 @@
     ./apps/swaylock.nix
     ./apps/xdg.nix
     ./apps/direnv.nix
-    ./configs/hyprland/hyprland.nix
     ./configs/waybar/waybar.nix
     ./configs/mango/mango.nix
   ];

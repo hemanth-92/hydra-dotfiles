@@ -42,6 +42,7 @@
     gifsicle # gif utility
     gtrash # rm replacement, put deleted files in system trash
     btop
+    cava
     imv # image viewer
     jq # JSON processor
     killall
@@ -88,7 +89,8 @@
     audacious
     zenity
     firefox
-    joplin-desktop
+
+    swww
 
     tree
     swayidle
