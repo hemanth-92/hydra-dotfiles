@@ -14,7 +14,10 @@
     }@inputs:
     let
       forEachSystem =
-        function: nixpkgs.lib.genAttrs (import systems) (system: function nixpkgs.legacyPackages.${system});
+        function:
+        nixpkgs.lib.genAttrs (import systems) (
+          system: function nixpkgs.legacyPackages.${system}
+        );
     in
     {
       devShells = forEachSystem (pkgs: {
@@ -31,7 +34,7 @@
               ];
               languages.python.uv = {
                 enable = true;
-                packages = pkgs.uv;
+                package = pkgs.uv;
               };
             }
           ];
