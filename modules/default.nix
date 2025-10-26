@@ -10,6 +10,5 @@
     ./zone.nix
     ./keymap.nix
     ./services.nix
-    ./theming.nix
   ];
 }

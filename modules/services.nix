@@ -31,27 +31,16 @@
     memoryPercent = 50;
   };
 
-  # Fonts
-  fonts = {
-    packages = with pkgs; [
-      maple-mono.NF-CN
-      noto-fonts
-      noto-fonts-emoji
-      noto-fonts-cjk-sans
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.fira-code
-      nerd-fonts.droid-sans-mono
-      font-awesome
-    ];
-    fontconfig = {
-      defaultFonts = {
-        emoji = [ "Noto Color Emoji" ]; # or use "OpenMoji Color"
-      };
+  # System services
+  security = {
+    rtkit.enable = true;
+    sudo.enable = true;
+    polkit.enable = true;
+    pam.services = {
+      swaylock = { };
     };
   };
 
-  # System services
-  security.polkit.enable = true;
   xdg.portal = {
     enable = true;
     wlr.enable = true;
@@ -63,7 +52,6 @@
 
   # Pipewire sound
   services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -91,14 +79,12 @@
     grimblast
     slurp
     brightnessctl
-    hyprlock
-    hypridle
     xdg-desktop-portal
     xdg-desktop-portal-wlr
     xdg-desktop-portal-gtk
-    xdg-desktop-portal-hyprland
     ffmpegthumbnailer
     watchdog
+    wlr-randr
 
     # System utils
     nvtopPackages.full
