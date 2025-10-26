@@ -33,6 +33,7 @@
 
   outputs =
     {
+      self,
       nixpkgs,
       stylix,
       home-manager,

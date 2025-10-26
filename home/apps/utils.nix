@@ -88,6 +88,7 @@
     audacious
     zenity
     firefox
+    joplin-desktop
 
     tree
     swayidle
@@ -124,7 +125,7 @@
     uv
 
     # java
-    jdk23
+    jdk17
 
     # rust
     rustup
@@ -142,5 +143,13 @@
     nixfmt-rfc-style
     shfmt
 
+    (pkgs.writeShellApplication {
+      name = "ns";
+      runtimeInputs = with pkgs; [
+        fzf
+        nix-search-tv
+      ];
+      text = builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh";
+    })
   ];
 }
