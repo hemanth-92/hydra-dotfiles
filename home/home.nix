@@ -22,9 +22,10 @@
     ./apps/swaylock.nix
     ./apps/xdg.nix
     ./apps/direnv.nix
-    ./configs/waybar/waybar.nix
-    ./configs/mango/mango.nix
+    ./core/waybar/waybar.nix
+    ./core/mango/mango.nix
   ];
+
   home.enableNixpkgsReleaseCheck = false;
   home = {
     username = "zenith";

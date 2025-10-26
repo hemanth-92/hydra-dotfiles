@@ -88,6 +88,5 @@
 
     # System utils
     nvtopPackages.full
-    waybar
   ];
 }

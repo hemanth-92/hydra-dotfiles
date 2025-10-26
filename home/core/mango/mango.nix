@@ -1,14 +1,9 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}:
+{ config, pkgs, lib, ... }:
 
 let
-  mangoconfDir = "${config.home.homeDirectory}/hydra-dotfiles/home/configs/mango/config";
-in
-{
+  mangoconfDir =
+    "${config.home.homeDirectory}/hydra-dotfiles/home/core/mango/config";
+in {
   home.file.".config/.keep".text = "";
 
   home.activation.symlink-mango = lib.hm.dag.entryAfter [ "writeBoundary" ] ''

@@ -52,7 +52,6 @@
     ncdu # disk space
     nitch # systhem fetch util
     nixd # nix lsp
-    nixfmt-rfc-style # nix formatter
     openssl
     onefetch # fetch utility for git repo
     pamixer # pulseaudio command line mixer
@@ -142,7 +141,7 @@
     prismlauncher
 
     # formatter
-    nixfmt-rfc-style
+    nixfmt
     shfmt
 
     (pkgs.writeShellApplication {
