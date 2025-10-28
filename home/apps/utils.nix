@@ -1,9 +1,4 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
+{ config, pkgs, inputs, ... }:
 
 {
   programs.eza = {
@@ -136,6 +131,7 @@
     # zen-browser
     # inputs.zen-browser.packages.${pkgs.system}.default
     #google-chrome
+    brave
 
     #minecraft
     prismlauncher
@@ -146,11 +142,10 @@
 
     (pkgs.writeShellApplication {
       name = "ns";
-      runtimeInputs = with pkgs; [
-        fzf
-        nix-search-tv
-      ];
+      runtimeInputs = with pkgs; [ fzf nix-search-tv ];
       text = builtins.readFile "${pkgs.nix-search-tv.src}/nixpkgs.sh";
     })
+
+    sway-audio-idle-inhibit
   ];
 }

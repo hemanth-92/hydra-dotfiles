@@ -1,14 +1,8 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
-}:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
     ./apps/utils.nix
-    ./apps/brave.nix
     ./apps/theming.nix
     ./apps/nh.nix
     ./apps/git.nix
