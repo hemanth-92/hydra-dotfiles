@@ -23,6 +23,22 @@
     ];
   };
 
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    NH_NOM = "1";
+  };
+
+   programs = {
+    dconf.enable = true;
+    seahorse.enable = true;
+    fuse.userAllowOther = true;
+    mtr.enable = true;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
+
   #zram
   zramSwap = {
     enable = true;
@@ -45,6 +61,7 @@
     enable = true;
     wlr.enable = true;
   };
+  
   services.printing.enable = true;
   services.gvfs.enable = true;
   services.dbus.enable = true;

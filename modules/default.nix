@@ -10,5 +10,6 @@
     ./zone.nix
     ./keymap.nix
     ./services.nix
+    ./virtualization.nix
   ];
 }
