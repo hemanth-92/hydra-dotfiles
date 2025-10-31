@@ -20,6 +20,19 @@
     ./core/mango/mango.nix
   ];
 
+  dconf.settings = {
+    "org/virt-manager/virt-manager/connections" = {
+      autoconnect = [ "qemu:///system" ];
+      uris = [ "qemu:///system" ];
+    };
+  };
+
+  home.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    NH_NOM = "1";
+  };
+
+
   home.enableNixpkgsReleaseCheck = false;
   home = {
     username = "zenith";

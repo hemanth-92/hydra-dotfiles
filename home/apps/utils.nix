@@ -137,7 +137,6 @@
     prismlauncher
 
     # formatter
-    nixfmt
     shfmt
 
     (pkgs.writeShellApplication {

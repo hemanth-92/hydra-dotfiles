@@ -43,14 +43,11 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  dconf = {
-    enable = true;
-    settings = {
+  dconf.settings = {
       "org/gnome/desktop/interface" = {
         color-scheme = "prefer-dark";
       };
     };
-  };
 
   home.packages = with pkgs; [
     noto-fonts
