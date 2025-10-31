@@ -14,6 +14,12 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "libvirtd"
+      "scanner"
+      "lp"
+      "video"
+      "input"
+      "audio"
     ];
     packages = with pkgs; [ kitty ];
   };
