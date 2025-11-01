@@ -2,7 +2,7 @@
 {
   programs.nh = {
     enable = true;
-    flake = "/home/zenith/hydra-dotfiles";
+    flake = "/home/zenith/dotfiles";
     clean = {
       enable = true;
       extraArgs = "--keep-since 7d --keep 5";
